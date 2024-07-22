@@ -1,8 +1,13 @@
+.nav-link {
+    padding: 5px 15px; /* Aggiungi padding per compensare l'aumento di larghezza */
+    transition: 0.2s;
+  }
+
 .nav-link:hover{
     color: var(--color-2);
 }
 
 .active{
     color: var(--color-2) !important;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
