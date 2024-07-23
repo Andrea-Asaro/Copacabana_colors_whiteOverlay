@@ -1,0 +1,50 @@
+.card-img, .card-img-top{
+    border-radius: 0px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+
+  }
+  
+  .card button {
+    position: absolute;
+    bottom: 60%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    opacity: 0;
+    /* transition: opacity 0.5s ease-in-out !important; */
+  }
+  
+  .cardbtn{
+    border-color: var(--color-0);
+    border-width: 2px;
+    border-radius: 0px;
+    --bs-btn-active-bg:  var(--color-1);
+    --bs-btn-active-border-color:  var(--color-0);
+    transition: 0.2s;
+    z-index: 1;
+  }
+
+  .cardbtn:hover{
+    background-color: var(--color-0);
+    border-color: var(--color-0);
+    color: var(--color-1);
+    
+}
+
+.card:hover button {
+    display: block;
+    opacity: 1;
+}
+
+.card img {
+    transition: 0.4s;
+}
+
+.card:hover  > div > img {
+    transform: scale(1.1) !important;
+
+}
+

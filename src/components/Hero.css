@@ -11,15 +11,6 @@
     height: 100%;
   }
   
-  body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-  }
-  
   .swiper {
     width: 100%;
     height: 80vh;
@@ -84,9 +75,20 @@
   color: var( --color-3); /* Cambia il colore del testo se necessario */
 }
 
+.btn-outline-primary{
+  --bs-btn-active-bg:  var(--color-1);
+  --bs-btn-active-border-color:  var(--color-0);
+} /* durante il click */
 
 .herobtn{
   border-color: var(--color-0);
   border-width: 2px;
   border-radius: 0px;
+}
+
+.herobtn:hover{
+  background-color: var(--color-0);
+  border-color: var(--color-0);
+  color: var(--color-1);
+
 }
