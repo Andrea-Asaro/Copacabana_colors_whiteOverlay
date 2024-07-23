@@ -1,0 +1,19 @@
+.imgBand{
+    background-image: url(../media/chisiamo.jpeg);
+    height: 45vh;
+    background-position: top;
+    position: relative;
+}
+
+.shadeBand{
+    position: absolute;
+     height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.lorem{
+    padding-right: 300px;
+    padding-left: 300px;
+}
