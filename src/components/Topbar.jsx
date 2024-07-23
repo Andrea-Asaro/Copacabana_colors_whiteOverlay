@@ -22,11 +22,11 @@ export default function Topbar(){
                 </div>
 
                 <div className='col-lg-3 d-flex justify-content-center  text-lg-start mb-lg-0'>
-                    <a href="#" className="text1">+01234567890</a>
+                    <a href="#" className="text1 pe-lg-2">+01234567890</a>
                 </div>
 
                 <div className='col-lg-3 me-3 d-flex justify-content-end text-lg-start mb-lg-0'>
-                    <a href="#" className="text1 me-0">Example@gmail.com</a>
+                    <a href="#" className="text1 me-0 pe-lg-2">Example@gmail.com</a>
                 </div>
 
 

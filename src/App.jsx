@@ -15,6 +15,7 @@ import Topbar from "./components/Topbar";
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import Hero from './components/Hero';
 // componenti
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
       </Routes>
 
+      <Hero/>
 
 
 

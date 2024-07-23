@@ -20,7 +20,7 @@ export default function Navbar(){
                 <div className="navbar-nav ms-auto me-lg-5 pe-lg-5 py-0">
                     <NavLink className="nav-item nav-link mb-1 mb-lg-0" to="/" end>Home</NavLink>
                     <NavLink className="nav-item nav-link mb-1 mb-lg-0" to="/about">Colors</NavLink>
-                    <NavLink className="nav-item nav-link mb-1 mb-lg-0" to="/contact">Contact Us</NavLink>
+                    <NavLink className="nav-item nav-link mb-1 mb-lg-0 pe-lg-3" to="/contact">Contact Us</NavLink>
                     {/* <div className="nav-item dropdown">
                         <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div className="dropdown-menu m-0">
