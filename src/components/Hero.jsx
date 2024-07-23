@@ -6,13 +6,16 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import '../components/Styles.css';
+import '../components/Hero.css';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 //media
 import hero1 from '../media/hero1.jpg';
+import hero2 from '../media/hero2.jpg';
+import hero3 from '../media/hero3.jpg';
+import hero4 from '../media/hero4.jpg';
 
 
 export default function Hero(){
@@ -20,34 +23,45 @@ export default function Hero(){
     return (
 
         <>
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          loop={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <img src={hero1} alt="" />
-          </SwiperSlide>
+        <div className='wholeHero'>
+            <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+            }}
+            loop={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+            >
+            <SwiperSlide>
+                <div className="imgShade"></div>
+                <img src={hero1} alt="" />
+            </SwiperSlide>
 
-          <SwiperSlide>Slide 2
+            <SwiperSlide>
+                <div className="imgShade"></div>
+                <img src={hero2} alt="" className='heroimg2' />
+            </SwiperSlide>
 
-          </SwiperSlide>
+            <SwiperSlide>
+                <div className="imgShade"></div>
+                <img src={hero3} alt="" />
+            </SwiperSlide>
 
-          <SwiperSlide>Slide 3
-
-          </SwiperSlide>
-          
-        </Swiper>
+            <SwiperSlide>
+                <div className="imgShade"></div>
+                <img src={hero4} alt="" />
+            </SwiperSlide>
+            
+            </Swiper>
+            <div className='heroContent'>
+                <h3 className='text0'>Welcome to</h3>
+                <h1 className='fw-bold text0'>COPACABANA COLORS</h1>
+                <button className='btn btn-outline-primary herobtn text0'>Gallery</button>
+            </div>
+        </div>
       </>
 
 

@@ -11,3 +11,22 @@
     color: var(--color-2) !important;
     /* font-weight: bold; */
 }
+
+.navbar-toggler {
+    outline: none;
+    box-shadow: none;
+    border-width: 0px;
+    color: var(--color-3) !important  ; /* Colore di default */
+  }
+  
+.navbar-togglerOpen{
+    outline: none;
+    box-shadow: none;
+    border-width: 0px;
+    color: var(--color-2) !important  ; /* Colore di default */
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+   
+  }
