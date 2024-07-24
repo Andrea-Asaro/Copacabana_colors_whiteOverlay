@@ -3,8 +3,6 @@ import Colors from './Colors';
 import ChiSiamo from './ChiSiamo';
 import ContactsMap from './ContactsMap';
 
-
-
 export default function Home(){
 
     return (
@@ -16,8 +14,5 @@ export default function Home(){
       <ContactsMap/>
         
     </div>
-
-
     )
-
 }
