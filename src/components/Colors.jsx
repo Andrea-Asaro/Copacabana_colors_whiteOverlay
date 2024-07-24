@@ -26,8 +26,8 @@ export default function Colors(){
                 <h2 className="text-center my-5 text3">OUR COLORS</h2>
 
                 {/* card  */}
-                <div className="col-12 col-lg-5">
-                    <div className="card border-0 rounded-0 bg0 mt-lg-5">
+                <div className="col-12 col-lg-5 ">
+                    <div className="card border-0 rounded-0 bg0 mt-lg-5 mb-3 mb-lg-0">
                         <div className='overflow-hidden'>
                             <img src={riccio} className="card-img-top border-0" alt="..."/>
                         </div>
@@ -41,7 +41,7 @@ export default function Colors(){
                 {/* card  */}
                 {/* card  */}
                 <div className="col-12 col-lg-5">
-                    <div className="card border-0 rounded-0 bg0 mt-lg-5">
+                    <div className="card border-0 rounded-0 bg0 mt-lg-5 mb-3 mb-lg-0">
                         <img src={luminaire} className="card-img-top" alt="..."/>
                         <div className="card-body">
                             <h5 className='fw-bold text1'>Nome stanza</h5>
@@ -52,7 +52,7 @@ export default function Colors(){
                 {/* card  */}
                 {/* card  */}
                 <div className="col-12 col-lg-5">
-                    <div className="card border-0 rounded-0 bg0 mt-lg-5">
+                    <div className="card border-0 rounded-0 bg0 mt-lg-5 mb-3 mb-lg-0">
                         <img src={verde} className="card-img-top" alt="..."/>
                         <div className="card-body">
                             <h5 className='fw-bold text1'>Nome stanza</h5>
@@ -63,7 +63,7 @@ export default function Colors(){
                 {/* card  */}
                 {/* card  */}
                 <div className="col-12 col-lg-5">
-                    <div className="card border-0 rounded-0 bg0 mt-lg-5">
+                    <div className="card border-0 rounded-0 bg0 mt-lg-5 mb-3 mb-lg-0">
                         <img src={riccio} className="card-img-top" alt="..."/>
                         <div className="card-body">
                             <h5 className='fw-bold text1'>Nome stanza</h5>

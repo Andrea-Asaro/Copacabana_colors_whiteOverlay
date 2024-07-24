@@ -1,6 +1,7 @@
 import Hero from './Hero';
 import Colors from './Colors';
 import ChiSiamo from './ChiSiamo';
+import ContactsMap from './ContactsMap';
 
 
 
@@ -12,6 +13,7 @@ export default function Home(){
       <Hero/>
       <Colors/>
       <ChiSiamo/>
+      <ContactsMap/>
         
     </div>
 
