@@ -59,11 +59,10 @@ export default function Hero(){
             <div className='heroContent'>
                 <h3 className='text0'>Welcome to</h3>
                 <h1 className='fw-bold text0'>COPACABANA COLORS</h1>
-                <button className='btn btn-outline-primary herobtn text0'>Gallery</button>
+                <button className='btn btn-outline-primary herobtn text0 mt-2 '>Gallery</button>
             </div>
         </div>
       </>
-
 
     )
 }

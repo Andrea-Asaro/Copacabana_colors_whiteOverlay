@@ -1,23 +1,23 @@
 :root{
     --color-1: #D4A373;
-    --color-2: #ffe6b8;
+    --color-2: #F5E8C9;
     --color-3: #222222;
     --color-0:#F4F1ED; 
 }
 
 
-/* backup colori come da reference
---color-1: #e9993e; (nuova)
---color-2: #F5E8C9;
+/* ipotesi nuovi colori? da decidere
+--color-1: #e9993e; 
+--color-2: #ffe6b8; 
 --color-3: #222222;
 --color-0:#F4F1ED; */
 
 /* bg and text color classes */
 .bg1{
-    background-color: var(--color-1);
+    background-color: var(--color-1); 
 }
 .bg2{
-    background-color: var(--color-2);
+    background-color: var(--color-2); 
 }
 .bg3{
     background-color: var(--color-3);
@@ -27,7 +27,7 @@
 }
 
 .text1{
-    color: var(--color-1);
+    color: var(--color-1); 
 }
 .text2{
     color: var(--color-2);

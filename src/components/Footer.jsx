@@ -43,27 +43,27 @@ export default function Footer(){
                 <div className="col mb-3">
                     <h5 className='h4 mb-4 text3'>Copacabana Colors</h5>
                     <ul className="nav flex-column">
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3">Home</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3">Colors</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3">Gallery</a></li>
+                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3 fs-6 ">Home</a></li>
+                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3 fs-6 ">Colors</a></li>
+                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3 fs-6 ">Gallery</a></li>
                     </ul>
                 </div>
 
                 <div className="col mb-3">
                     <h5 className='h4 mb-4 text3'>Hotel Design</h5>
                     <ul className="nav flex-column">
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3">Home</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3">Colors</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3">Gallery</a></li>
+                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3 fs-6 ">Home</a></li>
+                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3 fs-6 ">Colors</a></li>
+                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3 fs-6 ">Gallery</a></li>
                     </ul>
                 </div>
 
                 <div className="col mb-3">
                     <h5 className='h4 mb-4 text3'>Copacabana Suite</h5>
                     <ul className="nav flex-column">
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3">Home</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3">Colors</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3">Gallery</a></li>
+                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3 fs-6 ">Home</a></li>
+                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3 fs-6 ">Colors</a></li>
+                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text3 fs-6 ">Gallery</a></li>
                     </ul>
                 </div>
             </footer>
