@@ -34,7 +34,7 @@ export default function ContactsMap(){
 
     return(
         <>
-        <div className="container pt-5" >
+        <div className="container pt-5 mb-5">
             <div className="row">
                 <div className="col-lg-4 text3">
                     <h3 className="mb-4 text1 fw-bold">CONTATTI</h3>

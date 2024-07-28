@@ -33,7 +33,7 @@ export default function Colors(){
                         </div>
                         <div className="card-body">
                             <h5 className='fw-bold text1'>Nome stanza</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p className="card-text text3 ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <button onClick={handleDetailClick} className="btn btn-outline-primary btn-lg bg1 text0 cardbtn">Dettagli</button>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ export default function Colors(){
                         <img src={luminaire} className="card-img-top" alt="..."/>
                         <div className="card-body">
                             <h5 className='fw-bold text1'>Nome stanza</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p className="card-text text3 ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ export default function Colors(){
                         <img src={verde} className="card-img-top" alt="..."/>
                         <div className="card-body">
                             <h5 className='fw-bold text1'>Nome stanza</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p className="card-text text3 ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ export default function Colors(){
                         <img src={riccio} className="card-img-top" alt="..."/>
                         <div className="card-body">
                             <h5 className='fw-bold text1'>Nome stanza</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p className="card-text text3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>

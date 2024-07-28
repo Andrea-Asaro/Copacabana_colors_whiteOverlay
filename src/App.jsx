@@ -14,6 +14,8 @@ import Topbar from "./components/Topbar";
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
+
 // componenti
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
       </Routes>
 
+    <Footer/>
     </Router>
   )
 }
