@@ -19,9 +19,10 @@ import Footer from './components/Footer';
 // componenti
 
 function App() {
+  const basename = process.env.NODE_ENV === 'production' ? '/Copacabana_Colors__React' : '';
 
   return (
-    <Router>
+    <Router basename={basename}>
 
       <Topbar/>
       <Navbar/>
