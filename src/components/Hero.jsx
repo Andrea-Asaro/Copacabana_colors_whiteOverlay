@@ -57,9 +57,9 @@ export default function Hero(){
             
             </Swiper>
             <div className='heroContent'>
-                <h3 className='text0'>Welcome to</h3>
-                <h1 className='fw-bold text0'>COPACABANA COLORS</h1>
-                <button className='btn btn-outline-primary herobtn text0 mt-2 '>Gallery</button>
+                <h3 className='text0 font1'>Welcome to</h3>
+                <h1 className='fw-bold font1 text0 titletext '>COPACABANA COLORS</h1>
+                <button className='btn btn-outline-primary herobtn text0 mt-2 font2'>Gallery</button>
             </div>
         </div>
       </>

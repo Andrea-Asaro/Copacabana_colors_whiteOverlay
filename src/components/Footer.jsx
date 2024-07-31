@@ -28,7 +28,7 @@ export default function Footer(){
         
         
         <div className="container-fluid px-5 bg1">
-            <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5">
+            <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 font2">
                 <div className="col mb-3">
                     <a href="/" className="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                     <img src={logo} alt="" />

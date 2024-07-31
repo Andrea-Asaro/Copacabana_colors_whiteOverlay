@@ -3,6 +3,9 @@
     --color-2: #F5E8C9;
     --color-3: #222222;
     --color-0:#F4F1ED; 
+
+    --font1: "Yeseva One", serif;
+    --font2: "Lora", serif;
 }
 
 
@@ -40,10 +43,25 @@
 }
 /*end bg amd text color classes */
 
+
+.font1 {
+    font-family: var(--font1);
+}
+
+.font1-italic {
+    font-family: var(--font1);
+    font-style: italic;
+}
+
+.font2 {
+    font-family: var(--font2)
+}
+
+/* end miei font installati nel progetto  */
+
+
 body {
     background: var(--color-0);
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
     color: var(--color-3); 
     margin: 0;
     padding: 0;
