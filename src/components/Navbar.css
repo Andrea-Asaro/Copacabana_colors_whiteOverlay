@@ -64,6 +64,7 @@
 
 .navbtn:focus, .navbtn:active {
   background-color: var(--color-2); /* Cambia lo sfondo al colore desiderato */
+  border-color: var(--color-2) !important;
  
 }
 

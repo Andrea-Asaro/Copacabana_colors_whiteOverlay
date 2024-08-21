@@ -19,6 +19,7 @@ import Home from './components/Home';
 import GalleryPage from './components/GalleryPage';
 import ChisiamoPage from './components/ChisiamoPage';
 import Footer from './components/Footer';
+import Whatsapp from './components/Whatsapp';
 
 // componenti
 
@@ -36,6 +37,9 @@ function App() {
           <Route path="/galleryPage" element={<GalleryPage />} />
           <Route path="/chisiamoPage" element={<ChisiamoPage />} />
       </Routes>
+
+      <Whatsapp/>
+
 
     <Footer/>
     </Router>
