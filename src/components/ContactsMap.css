@@ -9,5 +9,39 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
 
+
+/* classi per il form  */
+.emailMessage{
+    height: 120px !important;
+}
+
+.form-control{
+    border-radius: 0;
+    box-shadow: none !important;
+    color: var(--color-3) !important;
+}
+
+.form-control:focus{
+    border-color: var(--color-1) ;
+}
+
+.formbtn{
+    background-color: var(--color-1);
+    border-radius: 0;
+    height: 3rem;
+    width: 100%;
+    color: var(--color-0);
+    border-color: var(--color-2);
+    --bs-btn-active-bg:  var(--color-1);
+    --bs-btn-active-border-color:  var(--color-2);
+    --bs-btn-active-color:  var(--color-2);
+    transition: 0.1s;
+
+}
+
+.formbtn:hover{
+    background-color: var(--color-2);
+    color: var(--color-3);
 }

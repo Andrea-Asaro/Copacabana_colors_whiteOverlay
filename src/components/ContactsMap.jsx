@@ -35,10 +35,10 @@ export default function ContactsMap(){
     return(
         <>
         <div className="container pt-5 mb-5">
-            <div className="row">
+            <div className="row justify-content-between">
 
 
-                <div className="col-lg-4 ps-4 ps-lg-0 text3">
+                <div className="col-lg-4 ps-4 ps-lg-0 mb-lg-4 text3">
                     <h3 className="mb-4 text1 fw-bold font1">CONTATTI</h3>
                     <div className="d-flex flex-column mb-2">
                         <p className="h4 text1 font2">Telefono</p>
@@ -55,7 +55,33 @@ export default function ContactsMap(){
                 </div>
 
 
-                <div className="col-lg-8">
+                <div className="col-lg-7 mb-lg-4">
+                    <div className="ps-1 ps-lg-0">
+                        <h3 className="mb-4 text1 mt-4 mt-lg-0 fw-bold ps-2 ps-lg-0 font1">SCRIVICI</h3>
+                    </div>
+                    
+                    {/* form  */}
+                    <div className="form-floating mb-3">
+                        <input type="text" className="form-control" id="floatingInput" placeholder="Enter your name"/>
+                        <label for="floatingInput">Nome</label>
+                    </div>
+                    <div className="form-floating mb-3">
+                        <input type="mail" className="form-control" id="floatingInput" placeholder="Enter your email"/>
+                        <label for="floatingInput">Email</label>
+                    </div>
+                    <div className="form-floating mb-3">
+                        <textarea className="form-control emailMessage" style={{ resize: 'none' }} placeholder="Leave a message here" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Messaggio</label>
+                    </div>
+                    <button className="btn formbtn">
+                        Invia
+                    </button>
+                    {/* form  */}
+
+                </div>
+
+
+                <div className="col-12 mt-5">
                     <div className="ps-1 ps-lg-0">
                         <h3 className="mb-4 text1 mt-4 mt-lg-0 fw-bold ps-2 ps-lg-0 font1">DOVE SIAMO</h3>
                     </div>
