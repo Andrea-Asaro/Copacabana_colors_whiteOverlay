@@ -11,6 +11,11 @@
     height: 100%;
 }
 
+.contactsIcons{
+    height: 70px;
+    /* width: 60px; */
+}
+
 
 /* classi per il form  */
 .emailMessage{
@@ -36,12 +41,16 @@
     border-color: var(--color-2);
     --bs-btn-active-bg:  var(--color-1);
     --bs-btn-active-border-color:  var(--color-2);
-    --bs-btn-active-color:  var(--color-2);
+    --bs-btn-active-color:  var(--color-0);
     transition: 0.1s;
 
 }
 
 .formbtn:hover{
-    background-color: var(--color-2);
-    color: var(--color-3);
+    /* background-color: white; */
+    background-color: var(--color-0);
+    border-color: var(--color-1) !important;
+    border: 3px solid;
+    /* color: var(--color-1); */
+    color: var(--color-1);
 }
