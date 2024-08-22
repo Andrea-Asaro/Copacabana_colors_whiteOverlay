@@ -44,3 +44,48 @@
     transform: scale(1.1) !important;
     filter: brightness(0.7); 
 }
+
+
+
+/*    modale    */
+
+.btn-close{
+  --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(212, 163, 115, 0.596) !important;
+  --bs-btn-close-hover-opacity:0.68;
+  border-radius: .1rem;
+}
+
+.modalbtn{
+  background-color: var(--color-1);
+  border-radius: 0;
+  height: 3rem;
+  color: var(--color-0);
+  /* border-color: var(--color-2); */
+  --bs-btn-active-bg:  var(--color-1);
+  --bs-btn-active-color:  var(--color-0);
+  transition: 0.1s;
+}
+
+.modalbtn:hover{
+  background-color: var(--color-0);
+  outline: solid var(--color-1);
+  color: var(--color-1);
+}
+
+.closebtn{
+  background-color: var(--color-0);
+  border-radius: 0;
+  height: 3rem;
+  color: var(--color-3);
+  border-color: var(--color-3);
+  border-width: 2px;
+  --bs-btn-active-bg:  var(--color-0);
+  --bs-btn-active-color:  var(--color-3);
+  transition: 0.1s;
+}
+
+.closebtn:hover{
+  background-color: var(--color-3);
+  outline: solid var(--color-3);
+  color: var(--color-0);
+}

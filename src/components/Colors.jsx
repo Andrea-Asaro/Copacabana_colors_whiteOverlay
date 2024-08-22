@@ -34,7 +34,9 @@ export default function Colors(){
                         <div className="card-body">
                             <h5 className='text1 font1'>Nome stanza</h5>
                             <p className="card-text font2 text3 ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <button onClick={handleDetailClick} className="btn btn-outline-primary btn-lg bg1 text0 cardbtn font2">Dettagli</button>
+                            <button type="button" className="btn btn-outline-primary btn-lg bg1 text0 cardbtn font2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    Dettagli
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -75,6 +77,28 @@ export default function Colors(){
                          
             </div>
         </div>
+
+
+            {/* Modal */}  
+            <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div className="modal-dialog modal-xl modal-dialog-centered">
+                    <div className="modal-content rounded-0">
+                        <div className="modal-header bg0 border-0">
+                            <h1 className="modal-title fs-5 font1 text1 fw-bold" id="staticBackdropLabel">NOME STANZA</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body bg0 border-0 font2 text3">
+                            Contenuto della modale
+                        </div>
+                        <div className="modal-footer bg0 border-0">
+                            <button type="button" className="btn closebtn" data-bs-dismiss="modal">Close</button>
+                            <button type="button" className="btn modalbtn">Prenota</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </>
     )
 }
