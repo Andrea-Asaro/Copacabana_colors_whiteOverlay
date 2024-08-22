@@ -5,10 +5,13 @@
     border-radius: 50%;
     padding: 2px;
     position: fixed;
-    top: 75%;
+    top: 80%;
     right: 5%;
     z-index: 3;
     cursor: pointer;
     /* transition: transform 0.4s ease-in-out; */
 }
 
+.whatsappimg{
+    width: 75px;
+}

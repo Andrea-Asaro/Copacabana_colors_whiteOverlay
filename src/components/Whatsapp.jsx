@@ -8,7 +8,7 @@ export default function Whatsapp(){
     return (
 
         <span className='whatsappCorner'>
-            <img src={walogo} alt="" />
+            <img src={walogo} className='whatsappimg' alt="" />
         </span>
 
     )

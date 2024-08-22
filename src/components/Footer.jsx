@@ -28,16 +28,12 @@ export default function Footer(){
         
         
         <div className="container-fluid px-5 bg1" id='footer'>
-            <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 font2">
+            <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5 my-5 px-lg-5 font2">
                 <div className="col mb-3">
                     <a href="/" className="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                     <img src={logo} alt="" />
                     </a>
                     <p className="text3 ps-3">© 2024</p>
-                </div>
-
-                <div className="col mb-3">
-
                 </div>
 
                 <div className="col mb-3">
