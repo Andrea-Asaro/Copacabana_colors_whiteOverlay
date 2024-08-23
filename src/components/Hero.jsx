@@ -1,3 +1,6 @@
+
+import { NavLink } from 'react-router-dom';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -59,7 +62,7 @@ export default function Hero(){
             <div className='heroContent'>
                 <h3 className='text0 font1'>Welcome to</h3>
                 <h1 className='fw-bold font1 text0 titletext '>COPACABANA COLORS</h1>
-                <button className='btn btn-outline-primary herobtn text0 mt-2 font2'>Gallery</button>
+                <button className='btn btn-outline-primary herobtn text0 mt-2 font2'> <NavLink to="/GalleryPage">Gallery</NavLink></button>
             </div>
         </div>
       </>
