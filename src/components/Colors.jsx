@@ -38,13 +38,13 @@ export default function Colors(){
 
                 {/* card  */}
                 <div className="col-12 col-lg-5 ">
-                    <div className="card border-0 rounded-0 bg0 mt-lg-5 mb-3 mb-lg-0 p-2 p-lg-0">
+                    <div className="card border-0 rounded-0 bg0 mt-lg-5 mb-3 mb-lg-0 pb-3 pb-lg-0 p-2 p-lg-0">
                         <div className='overflow-hidden'>
                             <img src={riccio} className="card-img-top border-0" alt="..."/>
                         </div>
                         <div className="card-body">
                             <h5 className='text1 font1'>Nome stanza</h5>
-                            <p className="card-text font2 text3 ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p className="card-text font2 text3 mb-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <button type="button" className="btn btn-outline-primary btn-lg bg1 text0 cardbtn font2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                     Dettagli
                             </button>

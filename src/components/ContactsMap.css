@@ -43,7 +43,6 @@
     --bs-btn-active-border-color:  var(--color-2);
     --bs-btn-active-color:  var(--color-0);
     transition: 0.1s;
-
 }
 
 .formbtn:hover{

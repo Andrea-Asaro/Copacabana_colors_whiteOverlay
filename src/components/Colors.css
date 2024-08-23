@@ -41,7 +41,7 @@
 }
 
 .card:hover  > div > img {
-    transform: scale(1.1) !important;
+    transform: scale(1.1);
     filter: brightness(0.7); 
 }
 
@@ -147,6 +147,8 @@ button:active a{
 
 @media (max-width: 992px) {
 
+  /*   swiper carousel    */
+
   .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
     bottom: 25px;
   }
@@ -172,4 +174,47 @@ button:active a{
     height: 80%;
     margin-top: 1.2rem;
   }
+
+  /*   details button    */
+
+  .card button {
+    position: static; /* Rimuovi la posizione assoluta */
+    transform: none; /* Rimuovi la trasformazione */
+    opacity: 1; /* Mantieni visibile il pulsante */
+    margin-top: auto; /* Aggiungi margine superiore per spingere il pulsante in basso */
+    background-color: var(--color-1);
+    border-radius: 0;
+    width: 35%;
+    color: var(--color-0);
+    border-color: var(--color-1);
+    --bs-btn-active-bg:  var(--color-0);
+    --bs-btn-active-border-color:  var(--color-1);
+    --bs-btn-active-color:  var(--color-1);
+    transition: 0.1s;
+  }
+
+  .card {
+    display: flex; /* Aggiungi flexbox per assicurare che il contenuto della card si disponga correttamente */
+    flex-direction: column; /* Assicura che il contenuto e il pulsante siano disposti in colonna */
+    height: 100%; /* Mantieni l'altezza della card */
+  }
+  
+  .card .card-body {
+    flex: 1; /* Lascia che il corpo della card occupi tutto lo spazio disponibile */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card .card-body button {
+    margin-top: auto; /* Spingi il pulsante in fondo al contenuto della card */
+  }
+
+  .card img {
+    transition: none; /* Disabilita la transizione */
+    transform: none !important; /* Rimuovi qualsiasi trasformazione */
+    filter: none !important; /* Rimuovi qualsiasi filtro */
+  }
+
+
+
 }
