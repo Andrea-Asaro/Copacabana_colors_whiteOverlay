@@ -51,7 +51,15 @@ export default function Colors() {
                     <img src={room.image} className="card-img-top border-0" alt={room.name}/>
                   </div>
                   <div className="card-body">
-                    <h5 className='text1 font1'>{room.name}</h5>
+                  <span 
+                    className='text1 font1 fw-bold fs-4'
+                    onClick={() => handleDetailClick(room)} // Aggiungi l'evento onClick
+                    data-bs-toggle="modal" 
+                    data-bs-target="#staticBackdrop"
+                    style={{ cursor: 'pointer' }} // Aggiungi il puntatore per indicare che è cliccabile
+                  >
+                    {room.name}
+                  </span>
                     <p className="card-text font2 text3 mb-2">{room.description}</p>
                     <button 
                       type="button" 
@@ -76,7 +84,7 @@ export default function Colors() {
               <div className="modal-content rounded-0">
   
                 <div className="modal-header bg0 border-0">
-                  <h1 className="modal-title fs-5 font1 text1 fw-bold" id="staticBackdropLabel">{selectedRoom.name}</h1>
+                  <h2 className="modal-title fs-4 ms-3 font1 text1 fw-bold " id="staticBackdropLabel">{selectedRoom.name}</h2>
                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
   

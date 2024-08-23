@@ -106,8 +106,6 @@ button:active a{
   list-style: circle;
 }
 
-
-
 /*   swiper    */
 
 .mySwiper{
@@ -142,7 +140,6 @@ button:active a{
 .swiper-pagination-bullet-active{
   background-color: var(--color-0);
 }
-
 
 
 @media (max-width: 992px) {
