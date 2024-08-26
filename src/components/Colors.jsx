@@ -1,6 +1,7 @@
 
 
 import React, { useState, useEffect } from 'react';
+import './Colors.css'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,12 +12,11 @@ import 'swiper/css/pagination';
 
 // Import Animation on Scroll
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Importa anche il CSS di AOS
+import 'aos/dist/aos.css'; 
 
 // import required modules
 import { Pagination } from 'swiper/modules';
 
-import './Colors.css'
 
 import riccio from '../media/riccio.jpg';
 import luminaire from '../media/luminaire.jpeg';
@@ -41,14 +41,44 @@ export default function Colors() {
       setSelectedRoom(room); // Imposta la stanza selezionata
     };
 
+
     useEffect(() => {
-      AOS.init({
-        duration: 400, // puoi personalizzare la durata dell'animazione
-        once: true, // l'animazione avviene solo una volta
-        // puoi aggiungere altre opzioni di configurazione qui
-      });
-    }, []);
+      const updateAOS = () => {
+          const isMobile = window.innerWidth < 992; // Imposta la larghezza del breakpoint
+          rooms.forEach((room, index) => {
+              const cardElement = document.querySelector(`.card[data-index="${index}"]`);
+              if (cardElement) {
+                  const animationType = isMobile
+                      ? index % 2 === 0
+                          ? 'flip-left'
+                          : 'flip-right'
+                      : index % 2 === 0
+                      ? 'fade-right'
+                      : 'fade-left';
+                  cardElement.setAttribute('data-aos', animationType);
+              }
+          });
+          AOS.refresh(); // Refresha AOS per applicare le nuove animazioni
+      };
   
+      AOS.init({
+          duration: 400,
+          once: true,
+      });
+  
+      updateAOS();
+      window.addEventListener('resize', updateAOS);
+  
+      return () => {
+          window.removeEventListener('resize', updateAOS);
+      };
+  }, [rooms]);
+  
+
+  
+
+
+
     return (
       <>
         <div className="container mt-5 px-lg-5">
@@ -59,9 +89,10 @@ export default function Colors() {
             {rooms.map((room, index) => (
               <div className="col-12 col-lg-5" key={index}>
                 <div 
-                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"} 
-                data-aos-delay={100 + index * 200}
                 className="card border-0 rounded-0 bg0 mt-lg-5 mb-3 mb-lg-0 pb-3 pb-lg-0 p-2 p-lg-0"
+                data-index={index}
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos-delay={150 + index * 200}
                 >
                   <div className='overflow-hidden'>
                     <img src={room.image} className="card-img-top border-0" alt={room.name}/>

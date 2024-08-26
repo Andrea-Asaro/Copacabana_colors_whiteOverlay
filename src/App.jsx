@@ -14,11 +14,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // componenti
 import Navbar from "./components/Navbar";
 import Topbar from "./components/Topbar";
+import Whatsapp from './components/Whatsapp';
 import Home from './components/Home';
 import GalleryPage from './components/GalleryPage';
 import ChisiamoPage from './components/ChisiamoPage';
 import Footer from './components/Footer';
-import Whatsapp from './components/Whatsapp';
 
 // componenti
 
@@ -30,6 +30,8 @@ function App() {
     <Router basename={basename}>
       <Topbar/>
       <Navbar/>
+      
+      <Whatsapp/>
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -37,7 +39,6 @@ function App() {
         <Route path="/chisiamoPage" element={<ChisiamoPage />} />
       </Routes>
 
-      <Whatsapp/>
 
       <Footer/>
     </Router>

@@ -1,3 +1,19 @@
+
+
+/* Animazione per l'apertura e la chiusura */
+ .navbar-collapse {
+  max-height: 0; 
+  overflow: hidden;
+  transition: max-height 0.3s ease-out !important; 
+}
+
+.navbar-collapse.show {
+  max-height: 200px; 
+} 
+/* Animazione per l'apertura e la chiusura */
+
+
+
 .navbar-nav {
   display: flex;
   align-items: center; /* Centra verticalmente gli elementi */
@@ -81,5 +97,12 @@
   .navbar-nav {
       flex-direction: column; /* Dispone i link in colonna */
       align-items: flex-start; /* Allinea i link a sinistra */
+  }
+}
+
+/* Assicura che la navbar-collapse sia sempre visibile su desktop */
+@media (min-width: 992px) {
+  .navbar-collapse {
+      max-height: none; /* Rimuovi la limitazione dell'altezza per i desktop */
   }
 }

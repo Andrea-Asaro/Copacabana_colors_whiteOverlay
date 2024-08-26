@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 
 // Import Animation on Scroll
@@ -13,12 +12,43 @@ import image4 from "../media/ChisiamoPageImage4.jpeg"
 export default function GalleryPage(){
 
     useEffect(() => {
+        const updateAOS = () => {
+            const isMobile = window.innerWidth < 992; // Imposta la larghezza del breakpoint
+            const imageElements = document.querySelectorAll('[data-aos]');
+            imageElements.forEach((element, index) => {
+                const animationType = isMobile
+                    ? index % 2 === 0
+                        ? 'fade-up'
+                        : 'fade-down'
+                    : element.getAttribute('data-original-aos');
+
+                // Calcola il delay per i dispositivi mobili
+                const delay = isMobile ? index * 350 : element.getAttribute('data-original-delay');
+                 
+                element.setAttribute('data-aos', animationType);
+                element.setAttribute('data-aos-delay', delay);
+            });
+            AOS.refresh(); // Rinfresca AOS per applicare le nuove animazioni
+        };
+
         AOS.init({
-          duration: 400, // puoi personalizzare la durata dell'animazione
-          once: true, // l'animazione avviene solo una volta
-          // puoi aggiungere altre opzioni di configurazione qui
+            duration: 400, // puoi personalizzare la durata dell'animazione
+            once: true, // l'animazione avviene solo una volta
         });
-      }, []);
+
+        // Memorizza l'animazione originale per ripristinarla su desktop
+        document.querySelectorAll('[data-aos]').forEach((element) => {
+            element.setAttribute('data-original-aos', element.getAttribute('data-aos'));
+            element.setAttribute('data-original-delay', element.getAttribute('data-aos-delay') || '0');
+        });
+
+        updateAOS();
+        window.addEventListener('resize', updateAOS);
+
+        return () => {
+            window.removeEventListener('resize', updateAOS);
+        };
+    }, []);
 
     return (
 
@@ -27,7 +57,7 @@ export default function GalleryPage(){
         <div className="container">
             <div className="row pb-5">
                 <div className="col-12 py-3">
-                    <h2 className="text-center my-5 py-2 fw-bold text1 font1 ">LA NOSTRA GALLERY</h2>
+                    <h2 className="text-center my-5 py-2 fw-bold text1 font1">LA NOSTRA GALLERY</h2>
                 </div>
 
                 <div className="col-lg-4 mb-4 mb-lg-0">

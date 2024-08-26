@@ -17,12 +17,42 @@ export default function ChisiamoPage(){
 
 
     useEffect(() => {
+        const updateAOS = () => {
+            const isMobile = window.innerWidth < 992; // Imposta la larghezza del breakpoint
+            const firstImageElement = document.querySelector('.first-image');
+            const textElement = document.querySelector('.text-content');
+
+            if (firstImageElement && textElement) {
+                if (isMobile) {
+                    // Rimuovi prima qualsiasi animazione esistente per forzare il cambiamento
+                    firstImageElement.removeAttribute('data-aos');
+                    textElement.removeAttribute('data-aos');
+
+                    // Aggiungi le nuove animazioni
+                    firstImageElement.setAttribute('data-aos', 'zoom-in');
+                    textElement.setAttribute('data-aos', 'fade-up');
+                } else {
+                    // Ripristina le animazioni originali su desktop
+                    firstImageElement.setAttribute('data-aos', 'fade-left');
+                    textElement.setAttribute('data-aos', 'fade-right');
+                }
+            }
+
+            AOS.refreshHard(); // Rinfresca AOS per applicare le nuove animazioni
+        };
+
         AOS.init({
-          duration: 400, // puoi personalizzare la durata dell'animazione
-          once: true, // l'animazione avviene solo una volta
-          // puoi aggiungere altre opzioni di configurazione qui
+            duration: 400, // Durata dell'animazione
+            once: true, // L'animazione avviene solo una volta
         });
-      }, []);
+
+        updateAOS();
+        window.addEventListener('resize', updateAOS);
+
+        return () => {
+            window.removeEventListener('resize', updateAOS);
+        };
+    }, []);
 
     return (
 
@@ -41,13 +71,13 @@ export default function ChisiamoPage(){
         <div className="container">
             <div className="row">
 
-                <div data-aos="fade-right" data-aos-duration="650" className="col-12 col-lg-6 lh-lg fs-5 mb-5 order-2 order-lg-1">
+                <div data-aos="fade-right" data-aos-duration="650" className="col-12 col-lg-6 lh-lg fs-5 mb-5 order-2 order-lg-1 text-content">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatem accusantium itaque, maxime sed hic, fuga in laborum odio repudiandae velit illum eius dolore recusandae tempora labore assumenda. Animi, sint?Lorem ipsum dolor sit amet consectetur, adipisicing elit.  Animi, sint?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatem accusantium itaque, maxime sed hic, fuga in laborum odio repudiandae velit illum eius dolore recusandae tempora labore assumenda. Animi, sint?</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatem accusantium itaque, maxime sed hic, fuga in laborum odio repudiandae velit illum eius dolore recusandae tempora labore assumenda. Aliquam voluptatem accusantium itaque, maxime sed hic, fuga in laborum odio repudiandae velit illum eius dolore recusandae tempora labore assumenda. Animi, sint?</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatem accusantium itaque, maxime sed hic, fuga in laborum odio repudiandae velit illum eius dolore recusandae tempora labore assumenda. Animi, sint?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, sint?</p>
                 </div>
 
-                <div data-aos="fade-left" data-aos-duration="650" className="col-12 col-lg-6 mb-5 order-1 order-lg-2">
+                <div data-aos="fade-left" data-aos-duration="650" className="col-12 col-lg-6 mb-5 order-1 order-lg-2 first-image">
                     <img src={image1} className="imageWidth ps-lg-4" alt="" />
                 </div>
 
