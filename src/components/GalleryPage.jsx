@@ -1,10 +1,24 @@
 
+import React, { useEffect } from 'react';
+
+// Import Animation on Scroll
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Importa anche il CSS di AOS
+
 import image1 from "../media/ChisiamoPageImage1.jpg"
 import image2 from "../media/ChisiamoPageImage2.jpeg"
 import image3 from "../media/ChisiamoPageImage3.jpg"
 import image4 from "../media/ChisiamoPageImage4.jpeg"
 
 export default function GalleryPage(){
+
+    useEffect(() => {
+        AOS.init({
+          duration: 400, // puoi personalizzare la durata dell'animazione
+          once: true, // l'animazione avviene solo una volta
+          // puoi aggiungere altre opzioni di configurazione qui
+        });
+      }, []);
 
     return (
 
@@ -17,51 +31,58 @@ export default function GalleryPage(){
                 </div>
 
                 <div className="col-lg-4 mb-4 mb-lg-0">
-                    <img
-                    src={image1}
-                    className="w-100 rounded-0 mb-4"
-                    alt="Boat on Calm Water"
-                    />
-
-                    <img
-                    src={image3}
-                    className="w-100 rounded-0 mb-4"
-                    alt="Wintry Mountain Landscape"
-                    />
+                    <div data-aos="fade-down-right">
+                        <img
+                        src={image1}
+                        className="w-100 rounded-0 mb-4"
+                        alt="Boat on Calm Water"
+                        />
+                    </div>
+                    <div data-aos="fade-up-right" data-aos-delay="100">
+                        <img
+                        src={image3}
+                        className="w-100 rounded-0 mb-4"
+                        alt="Wintry Mountain Landscape"
+                        />
+                    </div>
                 </div>
 
                 <div className="col-lg-4 mb-4 mb-lg-0">
-                    <img
-                    src={image4}
-                    className="w-100 rounded-0 mb-4"
-                    alt="Mountains in the Clouds"
-                    />
-
-                    <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
-                    className="w-100 rounded-0 mb-4"
-                    alt="Boat on Calm Water"
-                    />
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <img
+                        src={image4}
+                        className="w-100 rounded-0 mb-4"
+                        alt="Mountains in the Clouds"
+                        />
+                    </div>
+                    <div data-aos="fade-down" data-aos-delay="300">
+                        <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+                        className="w-100 rounded-0 mb-4"
+                        alt="Boat on Calm Water"
+                        />
+                    </div>
                 </div>
 
                 <div className="col-lg-4 mb-4 mb-lg-0">
-                    <img
-                    src={image2}
-                    className="w-100 rounded-0 mb-4"
-                    alt="Waves at Sea"
-                    />
-
-                    <img
-                    src={image3}
-                    className="w-100 rounded-0 mb-4"
-                    alt="Yosemite National Park"
-                    />
+                    <div data-aos="fade-down-left" data-aos-delay="400">
+                        <img
+                        src={image2}
+                        className="w-100 rounded-0 mb-4"
+                        alt="Waves at Sea"
+                        />
+                    </div>
+                    <div data-aos="fade-up-left" data-aos-delay="500">
+                        <img
+                        src={image3}
+                        className="w-100 rounded-0 mb-4"
+                        alt="Yosemite National Park"
+                        />
+                    </div>
                 </div>
+
             </div>
         </div>
-
-
-
 
     </>
     )
