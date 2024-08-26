@@ -29,7 +29,7 @@ export default function ChisiamoPage(){
                     textElement.removeAttribute('data-aos');
 
                     // Aggiungi le nuove animazioni
-                    firstImageElement.setAttribute('data-aos', 'zoom-in');
+                    // firstImageElement.setAttribute('data-aos', 'flip-left');
                     textElement.setAttribute('data-aos', 'fade-up');
                 } else {
                     // Ripristina le animazioni originali su desktop
