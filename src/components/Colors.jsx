@@ -55,8 +55,8 @@ export default function Colors() {
               // Definizione dell'animazione con useSpring
               const animationProps = useSpring({
                 opacity: inView ? 1 : 0,            // Da opaco a visibile
-                transform: inView ? 'translateY(0)' : 'translateY(20px)', // Muove leggermente la card verso l'alto
-                config: { duration: 400 },         // Durata animazione
+                transform: inView ? 'translateY(0)' : 'translateY(50px)', // Muove leggermente la card verso l'alto
+                config: {  mass: 1, tension: 180, friction: 12 },         // Durata
               });
 
               return (
