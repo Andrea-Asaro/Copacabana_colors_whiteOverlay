@@ -1,14 +1,14 @@
 
 @keyframes slideInRotate {
     0% {
-      transform: translateX(50vw) rotate(0deg) scale(0.4); /* Inizia fuori dallo schermo a destra e senza rotazione */
-      opacity: 0; /* Inizia invisibile */
+      transform: translateX(50vw) rotate(0deg) scale(0.4); 
+      opacity: 0; 
     }
     50% {
-      opacity: 1; /* Gradualmente diventa visibile */
+      opacity: 1; 
     }
     100% {
-      transform: translateX(0) rotate(720deg) scale(1); /* Termina nella posizione finale con una rotazione completa */
+      transform: translateX(0) rotate(720deg) scale(1); 
       opacity: 1;
     }
   }
@@ -25,7 +25,7 @@
     cursor: pointer;
     opacity: 0; /* Inizia invisibile */
     animation: slideInRotate 1s ease-in-out 2s forwards; /* Applica l'animazione con un ritardo di 2 secondi */
-
+    transform: translateZ(0) !important; /* Assicura che il pallino non influisca sul rendering del layout */
     /* transition: transform 0.3s ease-in-out !important; */
 }
 
