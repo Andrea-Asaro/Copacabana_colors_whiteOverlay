@@ -31,6 +31,10 @@
     color: var(--color-1);
 }
 
+.cardbtn:active{
+  color: var(--color-0) !important;
+}
+
 .card:hover button {
     display: block;
     opacity: 1;

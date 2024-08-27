@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 
+import '../components/Colors.css';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -62,7 +64,7 @@ export default function Colors() {
                     <p className="card-text font2 text3 mb-2">{room.description}</p>
                     <button 
                       type="button" 
-                      className="btn btn-outline-primary btn-lg bg1 text0 cardbtn font2" 
+                      className="btn btn-lg bg1 text0 cardbtn font2" 
                       data-bs-toggle="modal" 
                       data-bs-target="#staticBackdrop"
                       onClick={() => handleDetailClick(room)} // Chiama la funzione con i dettagli della stanza

@@ -75,15 +75,19 @@
   color: var( --color-3); /* Cambia il colore del testo se necessario */
 }
 
-.btn-outline-primary{
-  --bs-btn-active-bg:  var(--color-1);
-  --bs-btn-active-border-color:  var(--color-0);
-} /* durante il click */
-
 .herobtn{
   border-color: var(--color-0);
   border-width: 2px;
   border-radius: 0px;
+}
+
+.herobtn a{
+  color: var(--color-0);
+}
+
+.herobtn:active{
+  --bs-btn-active-bg:  var(--color-1);
+  --bs-btn-active-border-color:  var(--color-0);
 }
 
 .herobtn:hover{

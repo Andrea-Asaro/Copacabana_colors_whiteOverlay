@@ -1,6 +1,6 @@
 import './ChiSiamo.css'
 
-export default function Colors(){
+export default function ChiSiamo(){
 
     return(
         <>
