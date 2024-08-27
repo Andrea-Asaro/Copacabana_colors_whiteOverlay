@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 
 import '../components/Colors.css';
@@ -14,14 +12,16 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 
+// react spring e intersection observer imports 
+import { useSpring, animated } from '@react-spring/web';
+import { useInView } from 'react-intersection-observer';
 
 import riccio from '../media/riccio.jpg';
 import luminaire from '../media/luminaire.jpeg';
 import verde from '../media/verde.jpg';
 
-
 export default function Colors() {
-    
+
     // Stato per la stanza selezionata
     const [selectedRoom, setSelectedRoom] = useState(null);
   
@@ -32,12 +32,12 @@ export default function Colors() {
       { name: 'Stanza 3', description: 'Descrizione per stanza 3', image: verde, details: 'Dettagli specifici per Stanza 3', gallery: [verde, riccio, luminaire] },
       { name: 'Stanza 4', description: 'Descrizione per stanza 4', image: riccio, details: 'Dettagli specifici per Stanza 4', gallery: [riccio, luminaire, verde] },
     ];
-  
+
     // Funzione per aprire la modale con i dettagli della stanza selezionata
     const handleDetailClick = (room) => {
       setSelectedRoom(room); // Imposta la stanza selezionata
     };
-  
+
     return (
       <>
         <div className="container mt-5 px-lg-5">
@@ -45,36 +45,54 @@ export default function Colors() {
             <h2 className="text-center my-5 fw-bold text1 font1">OUR COLORS</h2>
   
             {/* Ciclo per generare le card dinamicamente */}
-            {rooms.map((room, index) => (
-              <div className="col-12 col-lg-5" key={index}>
-                <div className="card border-0 rounded-0 bg0 mt-lg-5 mb-3 mb-lg-0 pb-3 pb-lg-0 p-2 p-lg-0">
-                  <div className='overflow-hidden'>
-                    <img src={room.image} className="card-img-top border-0" alt={room.name}/>
-                  </div>
-                  <div className="card-body">
-                  <span 
-                    className='text1 font1 fw-bold fs-4'
-                    onClick={() => handleDetailClick(room)} // Aggiungi l'evento onClick
-                    data-bs-toggle="modal" 
-                    data-bs-target="#staticBackdrop"
-                    style={{ cursor: 'pointer' }} // Aggiungi il puntatore per indicare che è cliccabile
-                  >
-                    {room.name}
-                  </span>
-                    <p className="card-text font2 text3 mb-2">{room.description}</p>
-                    <button 
-                      type="button" 
-                      className="btn btn-lg bg1 text0 cardbtn font2" 
-                      data-bs-toggle="modal" 
-                      data-bs-target="#staticBackdrop"
-                      onClick={() => handleDetailClick(room)} // Chiama la funzione con i dettagli della stanza
-                    >
-                      Dettagli
-                    </button>
-                  </div>
+            {rooms.map((room, index) => {
+              // Utilizzo di useInView per rilevare quando la card entra nel viewport
+              const { ref, inView } = useInView({
+                triggerOnce: true, // L'animazione si attiva solo una volta
+                threshold: 0.2,    // La card si anima quando il 20% è visibile
+              });
+
+              // Definizione dell'animazione con useSpring
+              const animationProps = useSpring({
+                opacity: inView ? 1 : 0,            // Da opaco a visibile
+                transform: inView ? 'translateY(0)' : 'translateY(20px)', // Muove leggermente la card verso l'alto
+                config: { duration: 400 },         // Durata animazione
+              });
+
+              return (
+                <div className="col-12 col-lg-5" key={index}>
+                  {/* Animated div con animazione al suo interno */}
+                  <animated.div style={animationProps} ref={ref}>
+                    <div className="card border-0 rounded-0 bg0 mt-lg-5 mb-3 mb-lg-0 pb-3 pb-lg-0 p-2 p-lg-0">
+                      <div className='overflow-hidden'>
+                        <img src={room.image} className="card-img-top border-0" alt={room.name}/>
+                      </div>
+                      <div className="card-body">
+                      <span 
+                        className='text1 font1 fw-bold fs-4'
+                        onClick={() => handleDetailClick(room)} // Aggiungi l'evento onClick
+                        data-bs-toggle="modal" 
+                        data-bs-target="#staticBackdrop"
+                        style={{ cursor: 'pointer' }} // Aggiungi il puntatore per indicare che è cliccabile
+                      >
+                        {room.name}
+                      </span>
+                        <p className="card-text font2 text3 mb-2">{room.description}</p>
+                        <button 
+                          type="button" 
+                          className="btn btn-lg bg1 text0 cardbtn font2" 
+                          data-bs-toggle="modal" 
+                          data-bs-target="#staticBackdrop"
+                          onClick={() => handleDetailClick(room)} // Chiama la funzione con i dettagli della stanza
+                        >
+                          Dettagli
+                        </button>
+                      </div>
+                    </div>
+                  </animated.div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
   
@@ -135,4 +153,4 @@ export default function Colors() {
         {/* Modal */}
       </>
     );
-  }
+}
