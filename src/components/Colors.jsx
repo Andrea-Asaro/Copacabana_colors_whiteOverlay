@@ -1,7 +1,6 @@
 
 
-import React, { useState, useEffect } from 'react';
-import './Colors.css'
+import React, { useState } from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,10 +8,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-// Import Animation on Scroll
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
 
 // import required modules
 import { Pagination } from 'swiper/modules';
@@ -40,60 +35,17 @@ export default function Colors() {
     const handleDetailClick = (room) => {
       setSelectedRoom(room); // Imposta la stanza selezionata
     };
-
-
-    useEffect(() => {
-      const updateAOS = () => {
-          const isMobile = window.innerWidth < 992; // Imposta la larghezza del breakpoint
-          rooms.forEach((room, index) => {
-              const cardElement = document.querySelector(`.card[data-index="${index}"]`);
-              if (cardElement) {
-                  const animationType = isMobile
-                      ? index % 2 === 0
-                          ? 'flip-left'
-                          : 'flip-right'
-                      : index % 2 === 0
-                      ? 'fade-right'
-                      : 'fade-left';
-                  cardElement.setAttribute('data-aos', animationType);
-              }
-          });
-          AOS.refresh(); // Refresha AOS per applicare le nuove animazioni
-      };
   
-      AOS.init({
-          duration: 400,
-          once: true,
-      });
-  
-      updateAOS();
-      window.addEventListener('resize', updateAOS);
-  
-      return () => {
-          window.removeEventListener('resize', updateAOS);
-      };
-  }, [rooms]);
-  
-
-  
-
-
-
     return (
       <>
         <div className="container mt-5 px-lg-5">
           <div className="row justify-content-around">
-            <h2 className="text-center my-5 my-lg-4 fw-bold text1 font1">OUR COLORS</h2>
+            <h2 className="text-center my-5 fw-bold text1 font1">OUR COLORS</h2>
   
             {/* Ciclo per generare le card dinamicamente */}
             {rooms.map((room, index) => (
               <div className="col-12 col-lg-5" key={index}>
-                <div 
-                className="card border-0 rounded-0 bg0 mt-lg-5 mb-3 mb-lg-0 pb-3 pb-lg-0 p-2 p-lg-0"
-                data-index={index}
-                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-                data-aos-delay={150 + index * 200}
-                >
+                <div className="card border-0 rounded-0 bg0 mt-lg-5 mb-3 mb-lg-0 pb-3 pb-lg-0 p-2 p-lg-0">
                   <div className='overflow-hidden'>
                     <img src={room.image} className="card-img-top border-0" alt={room.name}/>
                   </div>

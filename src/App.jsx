@@ -9,6 +9,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css'
 
 
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // componenti
@@ -26,23 +27,23 @@ function App() {
   const basename = process.env.NODE_ENV === 'production' ? '/Copacabana_Colors__React' : '';
 
   return (
-    <div className="fade-in">
     <Router basename={basename}>
+
       <Topbar/>
       <Navbar/>
       
       <Whatsapp/>
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/galleryPage" element={<GalleryPage />} />
-        <Route path="/chisiamoPage" element={<ChisiamoPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/galleryPage" element={<GalleryPage />} />
+          <Route path="/chisiamoPage" element={<ChisiamoPage />} />
       </Routes>
 
 
-      <Footer/>
+
+    <Footer/>
     </Router>
-  </div>
   )
 }
 

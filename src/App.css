@@ -41,7 +41,7 @@
 .text0{
     color: var(--color-0);
 }
-/*end bg and text color classes */
+/*end bg amd text color classes */
 
 
 .font1 {
@@ -65,22 +65,4 @@ body {
     color: var(--color-3); 
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    position: relative !important;
-}
-
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-      background-color: white; /* Inizio dal bianco */
-    }
-    to {
-      opacity: 1;
-      background-color: var(--color-0); /* Colore di sfondo della pagina */
-    }
-}
-  
-  .fade-in {
-    animation: fadeIn 1.5s ease-in-out; /* Durata e velocità dell'animazione */
-}
-  
+  }
