@@ -26,9 +26,9 @@
     right: 5% !important;
     z-index: 1000 !important;
     cursor: pointer;
-    opacity: 0; /*inizia invisibile*/
+    opacity: 0;
     animation: slideInRotate 1s ease-in-out 2s forwards; /* Applica l'animazione con un ritardo di 2 secondi */
-  }
+}
 
 .whatsappimg{
     width: 75px;
