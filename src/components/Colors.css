@@ -49,6 +49,17 @@
     filter: brightness(0.7); 
 }
 
+/* swiper delle card da desktop  */
+
+.swiper-button-prev, .swiper-button-next{
+  color: var(--color-1);
+}
+
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: var(--color-1);
+  opacity: 1;
+}
 
 
 /*    modale    */
@@ -110,7 +121,8 @@ button:active a{
   list-style: circle;
 }
 
-/*   swiper    */
+
+/*   swiper nella modale    */
 
 .mySwiper{
   height: 100%;
@@ -135,20 +147,17 @@ button:active a{
   width: 40%;
 }
 
-/* mine for swiper  */
+/* mine for swiper modale  */
 
 .swiperCol{
   height: 65vh;
 }
 
-.swiper-pagination-bullet-active{
-  background-color: var(--color-0);
-}
 
 
 @media (max-width: 992px) {
 
-  /*   swiper carousel    */
+  /*   swiper nella modale    */
 
   .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
     bottom: 25px;
