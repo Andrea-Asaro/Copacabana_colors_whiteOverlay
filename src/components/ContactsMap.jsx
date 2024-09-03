@@ -57,12 +57,12 @@ export default function ContactsMap(){
     });
 
     // Animazione per la mappa 
-    const [mapRef, mapInView] = useInView({ triggerOnce: true, threshold: 0.6 });
+    const [mapRef, mapInView] = useInView({ triggerOnce: true, threshold: 0.3 });
     const mapFlip = useSpring({
-        from: { opacity: 0, transform: 'rotateX(90deg)' },
+        from: { opacity: 0, transform: 'rotateX(180deg)' },
         to: { 
             opacity: mapInView ? 1 : 0, 
-            transform: mapInView ? 'rotateX(0deg)' : 'rotateX(90deg)'
+            transform: mapInView ? 'rotateX(0deg)' : 'rotateX(180deg)'
         },
         config: { mass: 5, tension: 500, friction: 80 },
     });

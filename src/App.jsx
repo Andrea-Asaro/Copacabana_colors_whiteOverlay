@@ -32,7 +32,6 @@ function App() {
       <Topbar/>
       <Navbar/>
       
-      <Whatsapp/>
 
       <Routes>
           <Route path="/" element={<Home />} />
@@ -40,6 +39,7 @@ function App() {
           <Route path="/chisiamoPage" element={<ChisiamoPage />} />
       </Routes>
 
+      <Whatsapp/>
 
 
     <Footer/>
