@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://andrea-asaro.github.io/Copacabana_colors_whiteOverlay/",
+  "homepage": "https://andrea-asaro.github.io/Copacabana_colors_whiteOverlay",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
