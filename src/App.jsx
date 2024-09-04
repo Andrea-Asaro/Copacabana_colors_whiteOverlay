@@ -24,7 +24,7 @@ import Footer from './components/Footer';
 // componenti
 
 function App() {
-  const basename = process.env.NODE_ENV === 'production' ? '/Copacabana_Colors__React' : '';
+  const basename = process.env.NODE_ENV === 'production' ? '/Copacabana_colors_whiteOverlay' : '';
 
   return (
     <Router basename={basename}>
