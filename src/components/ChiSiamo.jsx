@@ -25,7 +25,7 @@ export default function ChiSiamo() {
                         CHI SIAMO
                     </animated.h3>
                     <animated.p style={fadeUpStyle} className="text0 z-2 mt-4 text-center fs-4 lorem font2">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatem accusantium itaque, maxime sed hic, fuga in laborum odio repudiandae velit illum eius dolore recusandae tempora labore assumenda. Animi, sint?
+                        Scopri il fascino del Copacabana Colors, il B&B che porta la Puglia nella tua vacanza. A due passi dal mare, ti accoglie con camere luminose e curate nei dettagli, dove ogni comfort è pensato per farti sentire come a casa, con un tocco di stile e autenticità.
                     </animated.p>
                 </div>
             </div>

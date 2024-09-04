@@ -67,9 +67,10 @@ export default function ChisiamoPage() {
                         ref={textRef}
                         style={textSlideIn}
                     >
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatem accusantium itaque, maxime sed hic, fuga in laborum odio repudiandae velit illum eius dolore recusandae tempora labore assumenda. Animi, sint?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, sint?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatem accusantium itaque, maxime sed hic, fuga in laborum odio repudiandae velit illum eius dolore recusandae tempora labore assumenda. Aliquam voluptatem accusantium itaque, maxime sed hic, fuga in laborum odio repudiandae velit illum eius dolore recusandae tempora labore assumenda. Animi, sint?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam voluptatem accusantium itaque, maxime sed hic, fuga in laborum odio repudiandae velit illum eius dolore recusandae tempora labore assumenda. Animi, sint?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, sint?</p>
+                        <p>Il Copacabana Colors è un pratico e moderno B&B sul mare in Puglia, situato a pochi passi dal lungomare. Con 5 camere facilmente accessibili al piano terra, è perfetto per chi ha esigenze particolari o preferisce evitare le scale. La zona comune offre un angolo cottura completo, ideale per preparare pranzi o cene veloci, o per le esigenze dei più piccoli.</p>
+                        <p>
+                        Ogni camera è dotata di un'ampia portafinestra che illumina naturalmente l'ambiente, creando un'atmosfera rilassante. Le stanze, ispirate ai tipici temi pugliesi, offrono tutti i comfort: letto matrimoniale (con possibilità in alcune di esse di aggiungere un letto singolo o una culla), scrivania, frigobar, TV, asciugacapelli, macchina del caffè espresso e bagno privato con doccia. Prenota ora il tuo soggiorno al Copacabana Colors!
+                        </p>
                     </animated.div>
 
                     <animated.div

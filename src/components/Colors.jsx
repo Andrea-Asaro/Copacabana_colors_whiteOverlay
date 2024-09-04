@@ -18,19 +18,52 @@ import { useInView } from 'react-intersection-observer';
 
 import riccio from '../media/riccio.jpg';
 import luminaire from '../media/luminaire.jpeg';
-import verde from '../media/verde.jpg';
+import fico from '../media/fico.jpg';
+import lavanda from '../media/lavanda.jpg';
+import maioliche from '../media/maioliche.jpg';
 
 export default function Colors() {
   const [selectedRoom, setSelectedRoom] = useState(null);
 
   // Array di oggetti che rappresentano le informazioni delle card
   const rooms = [
-    { name: 'Stanza 1', description: 'Descrizione per stanza 1', image: riccio, details: 'Dettagli specifici per Stanza 1', gallery: [riccio, luminaire, verde] },
-    { name: 'Stanza 2', description: 'Descrizione per stanza 2', image: luminaire, details: 'Dettagli specifici per Stanza 2', gallery: [luminaire, verde, riccio] },
-    { name: 'Stanza 3', description: 'Descrizione per stanza 3', image: verde, details: 'Dettagli specifici per Stanza 3', gallery: [verde, riccio, luminaire] },
-    { name: 'Stanza 4', description: 'Descrizione per stanza 4', image: riccio, details: 'Dettagli specifici per Stanza 4', gallery: [riccio, luminaire, verde] },
-    { name: 'Stanza 5', description: 'Descrizione per stanza 5', image: verde, details: 'Dettagli specifici per Stanza 5', gallery: [verde, luminaire, riccio] },
+    { 
+      name: "Riccio di Mare", 
+      description: "La camera più ampia presente in struttura, offre la possibilità di aggiungere un letto singolo e/o una culla.", 
+      image: riccio, 
+      details: "Dettagli specifici per Riccio di Mare", 
+      gallery: [riccio, luminaire, fico] 
+    },
+    { 
+      name: "Luminarie", 
+      description: "La camera più luminosa, offre la possibilità di aggiungere un letto singolo o una culla.", 
+      image: luminaire, 
+      details: "Dettagli specifici per Luminarie", 
+      gallery: [luminaire, fico, riccio] 
+    },
+    { 
+      name: "Fico D'India", 
+      description: "La camera più riservata del B&B, ha una porta finestra apribile che affaccia sul cortile interno.", 
+      image: fico, 
+      details: "Dettagli specifici per Fico D'India", 
+      gallery: [fico, riccio, luminaire] 
+    },
+    { 
+      name: "Lavanda", 
+      description: "Una camera matrimoniale standard, perfetta per le coppie che cercano un soggiorno intimo e rilassante.", 
+      image: lavanda, 
+      details: "Dettagli specifici per Lavanda", 
+      gallery: [riccio, luminaire, fico] 
+    },
+    { 
+      name: "Maioliche", 
+      description: "Camera piccola, ideale per viaggiatori singoli. Senza vista esterna ma confortevole e completa.", 
+      image: maioliche, 
+      details: "Dettagli specifici per Maioliche", 
+      gallery: [fico, luminaire, riccio] 
+    },
   ];
+  
 
   // Funzione per aprire la modale con i dettagli della stanza selezionata
   const handleDetailClick = (room) => {
