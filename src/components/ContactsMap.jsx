@@ -80,7 +80,8 @@ export default function ContactsMap(){
                         <img src={landline} className="contactsIcons p-1 me-3" alt=""/>
                         <div className="d-flex flex-column mb-2">
                             <p className="h4 text1 font2">Telefono</p>
-                            <p className="font2 fs-4">123456789</p>
+                            <p className="font2 fs-4">0883 65 59 49
+                            </p>
                         </div>
                     </div>
 
@@ -88,7 +89,7 @@ export default function ContactsMap(){
                         <img src={mobile} className="contactsIcons p-1 me-3" alt=""/>
                         <div className="d-flex flex-column mb-2">
                             <p className="h4 text1 font2">Cellulare</p>
-                            <p className="font2 fs-4">987654321</p>
+                            <p className="font2 fs-4">335 772 86 11</p>
                         </div>
                     </div>
 
@@ -104,7 +105,8 @@ export default function ContactsMap(){
                         <img src={location} className="contactsIcons p-1 me-3" alt=""/>
                         <div className="d-flex flex-column mb-2">
                             <p className="h4 text1 font2">Copacabana Colors</p>
-                            <p className="font2 fs-4">Via Mario Rossi 123</p>
+                            <p className="font2 fs-4">Via Vittorio Veneto 139/E
+                            </p>
                         </div>
                     </div>
                 </animated.div>
@@ -145,7 +147,7 @@ export default function ContactsMap(){
             
             <div className="pe-lg-5 mapResponsive">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d748.4938900326804!2d16.15151871454879!3d41.37461570703148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13382025fbb79855%3A0xb7749c4547df0136!2sVia%20Principe%20Amedeo%2C%201%2C%2076016%20Margherita%20di%20Savoia%20BT!5e0!3m2!1sen!2sit!4v1721811894757!5m2!1sen!2sit" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5988.290646282114!2d16.15517938754379!3d41.37092728609005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133820282f38259f%3A0xea6c4f0f79dbf496!2sB%20%26%20B%20Copacabana%20Colors!5e0!3m2!1sen!2sit!4v1725457084473!5m2!1sen!2sit" 
                     width={dimensions.width} 
                     height={dimensions.height}  
                     allowFullScreen="" 
@@ -162,3 +164,4 @@ export default function ContactsMap(){
         </>
     )
 } 
+

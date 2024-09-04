@@ -31,35 +31,35 @@ export default function Colors() {
       name: "Riccio di Mare", 
       description: "La camera più ampia presente in struttura, offre la possibilità di aggiungere un letto singolo e/o una culla.", 
       image: riccio, 
-      details: "Dettagli specifici per Riccio di Mare", 
+      details: "La camera più ampia presente in struttura, ideale per famiglie o gruppi di amici che desiderano più spazio e comfort. La camera è dotata di tutti i servizi necessari per un soggiorno piacevole e rilassante.\n\nDettagli:\n- Letto matrimoniale e possibilità di aggiungere un letto singolo\n- Ampio spazio per muoversi",
       gallery: [riccio, luminaire, fico] 
     },
     { 
       name: "Luminarie", 
-      description: "La camera più luminosa, offre la possibilità di aggiungere un letto singolo o una culla.", 
+      description: "La camera più luminosa della struttura, offre la possibilità di aggiungere un letto singolo o una culla.", 
       image: luminaire, 
-      details: "Dettagli specifici per Luminarie", 
+      details: "La camera più luminosa della struttura, perfetta per chi ama la luce naturale e desidera un ambiente arioso e accogliente. La camera è arredata con gusto e dotata di tutti i comfort moderni.\n\nDettagli:\n- Letto matrimoniale con opzione per letto singolo\n- Ampie finestre che lasciano entrare molta luce\n- Arredamento moderno e confortevole",
       gallery: [luminaire, fico, riccio] 
     },
     { 
       name: "Fico D'India", 
       description: "La camera più riservata del B&B, ha una porta finestra apribile che affaccia sul cortile interno.", 
       image: fico, 
-      details: "Dettagli specifici per Fico D'India", 
+      details: "La camera più riservata del B&B, ideale per chi cerca tranquillità e privacy. La camera è dotata di tutti i comfort necessari per un soggiorno rilassante e piacevole.\n\nDettagli:\n- Letto matrimoniale\n- Vista sul cortile interno\n- Ambiente tranquillo e riservato",
       gallery: [fico, riccio, luminaire] 
     },
     { 
       name: "Lavanda", 
       description: "Una camera matrimoniale standard, perfetta per le coppie che cercano un soggiorno intimo e rilassante.", 
       image: lavanda, 
-      details: "Dettagli specifici per Lavanda", 
+      details: "Una camera matrimoniale standard, arredata con colori tenui e rilassanti, creando un'atmosfera accogliente e serena. Dotata di tutti i comfort moderni per un soggiorno piacevole.\n\nDettagli:\n- Letto matrimoniale\n- Arredamento accogliente e rilassante\n- Ambiente intimo e sereno",
       gallery: [riccio, luminaire, fico] 
     },
     { 
       name: "Maioliche", 
       description: "Camera piccola, ideale per viaggiatori singoli. Senza vista esterna ma confortevole e completa.", 
       image: maioliche, 
-      details: "Dettagli specifici per Maioliche", 
+      details: "Camera piccola, perfetta per chi cerca un alloggio funzionale e ben arredato. La camera è dotata di tutti i servizi necessari per un soggiorno confortevole.\n\nDettagli:\n- Letti singoli\n- Arredamento funzionale\n- Ambiente confortevole e completo",
       gallery: [fico, luminaire, riccio] 
     },
   ];
@@ -212,12 +212,11 @@ export default function Colors() {
                       </Swiper>
                     </div>
                     <div className="col-12 mt-lg-3">
-                      <p>{selectedRoom.details}</p>
+                      <p>{selectedRoom.details.split('\n\nDettagli:')[0]}</p>
                       <ul id='detailsBulletList'>
-                        <li>Bullet point n.1</li>
-                        <li>Bullet point n.2</li>
-                        <li>Bullet point n.3</li>
-                        <li>Bullet point n.4</li>
+                        {selectedRoom.details.split('\n\nDettagli:\n-')[1].split('\n-').map((item, index) => (
+                          <li key={index}>{item.trim()}</li>
+                        ))}
                       </ul>
                     </div>
                   </div>
