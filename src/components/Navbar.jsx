@@ -12,13 +12,21 @@ export default function Navbar() {
         }
     };
 
+    const handleModalClick = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const handleCloseClick = () => {
+        setIsOpen(false);
+    };
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg1 px-4 px-lg-5 py-3 py-lg-0">
+        <nav className="navbar d-flex justify-content-between navbar-expand-lg navbar-light bg1 px-4 px-lg-5 py-3 py-lg-0">
             <NavLink to="/" className="navbar-brand p-0 mb-lg-2 ms-lg-5 ps-lg-5">
                 <img src={logo} alt="Logo" className='ps-lg-2' />
             </NavLink>
             <button 
-                onClick={() => setIsOpen(!isOpen)} 
+                onClick={handleModalClick} 
                 className={`navbar-toggler border-0 ${isOpen ? "navbar-togglerOpen" : ""}`} 
                 type="button" 
                 aria-controls="navbarCollapse"
@@ -27,44 +35,51 @@ export default function Navbar() {
             >
                 <i className="bi bi-list-nested fs-1 text-a"></i>
             </button>
-            <div 
-                className={`navbar-collapse ${isOpen ? 'show' : ''}`} 
-                id="navbarCollapse"
-            >
-                <div className="navbar-nav ms-auto me-lg-5 pe-lg-5 py-0">
-                    <NavLink 
-                        className="nav-item nav-link text3 font2 mb-1 mb-lg-0 mt-1 mt-lg-0" 
-                        to="/" 
-                        end 
-                        onClick={handleLinkClick}
-                    >
-                        Home
-                    </NavLink>
-                    <NavLink 
-                        className="nav-item nav-link text3 font2 mb-1 mb-lg-0" 
-                        to="/galleryPage" 
-                        onClick={handleLinkClick}
-                    >
-                        Gallery
-                    </NavLink>
-                    <NavLink 
-                        className="nav-item nav-link text3 font2 mb-1 mb-lg-0" 
-                        to="/chisiamoPage" 
-                        onClick={handleLinkClick}
-                    >
-                        Chi siamo
-                    </NavLink>
-                    <button className='btn navbtn mb-1 mb-lg-0'>
-                        <a 
-                            href="https://www.booking.com/hotel/it/copacabana-colors-margherita-di-savoia.it.html?aid=311091&label=copacabana-colors-margherita-di-savoia-Ket%2AnM2r9rdqJk5m3MbsNwS450167591004%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atiaud-297601666995%3Akwd-400031164451%3Alp1008080%3Ali%3Adec%3Adm&sid=21b28a810709e5d6da1613a5f4b56075&dest_id=-121072;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1724249448;srpvid=8a3063afcf5201be;type=total;ucfs=1&" 
-                            target="blank" 
-                            className="nav-item nav-link text1 font2"
-                        >
-                            Prenota
-                        </a>
-                    </button>
+            {isOpen && (
+                <div className={`modal-overlay ${isOpen ? "show" : ""}`}>
+                    <div className="navModal-content">
+                        <button 
+                            type="button" 
+                            className="btn-close" 
+                            aria-label="Close" 
+                            onClick={handleCloseClick}
+                        ></button>
+                        <div className="navbar-nav">
+                            <NavLink 
+                                className="nav-item nav-link text3 font2 fs-4" 
+                                to="/" 
+                                end 
+                                onClick={() => { handleLinkClick(); handleModalClick(); }}
+                            >
+                                Home
+                            </NavLink>
+                            <NavLink 
+                                className="nav-item nav-link text3 font2 fs-4" 
+                                to="/galleryPage" 
+                                onClick={() => { handleLinkClick(); handleModalClick(); }}
+                            >
+                                Gallery
+                            </NavLink>
+                            <NavLink 
+                                className="nav-item nav-link text3 font2 fs-4" 
+                                to="/chisiamoPage" 
+                                onClick={() => { handleLinkClick(); handleModalClick(); }}
+                            >
+                                Chi siamo
+                            </NavLink>
+                            <button className='btn navbtn'>
+                                <a 
+                                    href="https://www.booking.com/hotel/it/copacabana-colors-margherita-di-savoia.it.html?aid=311091&label=copacabana-colors-margherita-di-savoia-Ket%2AnM2r9rdqJk5m3MbsNwS450167591004%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atiaud-297601666995%3Akwd-400031164451%3Alp1008080%3Ali%3Adec%3Adm&sid=21b28a810709e5d6da1613a5f4b56075&dest_id=-121072;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1724249448;srpvid=8a3063afcf5201be;type=total;ucfs=1&" 
+                                    target="blank" 
+                                    className="nav-item nav-link text1 font2 fs-4"
+                                >
+                                    Prenota
+                                </a>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            )}
         </nav>
     );
 }

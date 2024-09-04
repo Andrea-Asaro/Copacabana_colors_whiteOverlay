@@ -1,5 +1,3 @@
-
-
 /* Animazione per l'apertura e la chiusura */
  .navbar-collapse {
   max-height: 0; 
@@ -12,6 +10,10 @@
 } 
 /* Animazione per l'apertura e la chiusura */
 
+
+nav > button{
+  margin-right: 100px;
+}
 
 
 .navbar-nav {
@@ -26,12 +28,12 @@
   }
 
 .nav-link:hover{
-    color: var(--color-2);
+    color: var(--color-1);
 }
 
-.active{
-    color: var(--color-2) !important;
-    /* font-weight: bold; */
+.navbar-nav .active{
+    color: var(--color-1) !important;
+    font-weight: bold;
 }
 
 .navbar-toggler {
@@ -39,6 +41,7 @@
     box-shadow: none;
     border-width: 0px;
     color: var(--color-3) !important  ; /* Colore di default */
+    display: block !important;
   }
   
 .navbar-togglerOpen{
@@ -55,18 +58,18 @@
 
   .navbtn{
     border-color: var(--color-1);
-    background-color: var(--color-2);
+    background-color: var(--color-0);
     border-width: 2px;
     border-radius: 0px;
-    --bs-btn-active-bg:  var(--color-2);
-    --bs-btn-active-border-color:  var(--color-0);
+    --bs-btn-active-bg:  var(--color-0);
+    --bs-btn-active-border-color:  var(--color-1);
     transition: 0.2s;
     z-index: 1;
   }
 
   .navbtn:hover{
     background-color: var(--color-1);
-    border-color: var(--color-2);
+    border-color: var(--color-1);
     color: var(--color-2);
 }
 
@@ -79,8 +82,8 @@
 }
 
 .navbtn:focus, .navbtn:active {
-  background-color: var(--color-2); /* Cambia lo sfondo al colore desiderato */
-  border-color: var(--color-2) !important;
+  background-color: var(--color-0); /* Cambia lo sfondo al colore desiderato */
+  border-color: var(--color-1) !important;
  
 }
 
@@ -89,6 +92,63 @@
 }
 
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(244, 241, 237, 0.5) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  transition: opacity 0.3s ease !important; /* Aggiungi transizione per l'opacità */
+  backdrop-filter: blur(8px); /* Aggiungi sfocatura */
+  background: rgba(var(--color-0), 0.5); /* Colore semitrasparente */
+}
+
+.navModal-content {
+  position: relative; /* Aggiungi questa regola per posizionare il pulsante di chiusura */
+  background: rgba(var(--color-0), 0.9); /* Colore semitrasparente */
+  height: 100vh; /* Altezza pari a tutto lo schermo */
+  width: 100vw;
+  padding: 20px;
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease; /* Aggiungi transizione per l'opacità */
+  /* opacity: 0; Inizialmente invisibile */
+  box-shadow: 0 0 100px rgb(244, 241, 237);  /* Aggiungi ombra diffusa */
+}
+
+.navModal-content a, .navModal-content button {
+  opacity: 1; /* Mantiene i link e i bottoni solidi */
+}
+
+.navModal-content .btn-close {
+  position: absolute;
+  top: 25px;
+  right: 170px;
+  z-index: 1051; /* Assicurati che il pulsante sia sopra il contenuto della modale */
+  --bs-btn-close-color: red !important;
+  --bs-btn-close-opacity: 0.5 !important;
+}
+
+.modal-overlay.show .navModal-content {
+  opacity: 1; /* Visibile quando la modale è aperta */
+  
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+      display: flex; /* Mostra i link su desktop */
+      flex-direction: row; /* Dispone i link in riga */
+      justify-content: center; /* Centra i link orizzontalmente */
+  }
+}
 
 
 
@@ -97,6 +157,16 @@
   .navbar-nav {
       flex-direction: column; /* Dispone i link in colonna */
       align-items: flex-start; /* Allinea i link a sinistra */
+  }
+  nav > button{
+    margin-right: 0px;
+  }
+
+  .navModal-content .btn-close {
+    position: absolute;
+    top: 37px;
+    right: 40px;
+    z-index: 1051; /* Assicurati che il pulsante sia sopra il contenuto della modale */
   }
 }
 
