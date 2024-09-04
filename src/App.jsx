@@ -28,21 +28,19 @@ function App() {
 
   return (
     <Router basename={basename}>
+      <div className="fade-in"> 
+        {/* <Topbar/> */}
+        <Navbar/>
+        
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/galleryPage" element={<GalleryPage />} />
+            <Route path="/chisiamoPage" element={<ChisiamoPage />} />
+        </Routes>
 
-      {/* <Topbar/> */}
-      <Navbar/>
-      
-
-      <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/galleryPage" element={<GalleryPage />} />
-          <Route path="/chisiamoPage" element={<ChisiamoPage />} />
-      </Routes>
-
-      <Whatsapp/>
-
-
-    <Footer/>
+        <Whatsapp/>
+        <Footer/>
+      </div> 
     </Router>
   )
 }

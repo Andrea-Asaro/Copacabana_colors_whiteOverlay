@@ -17,10 +17,21 @@ import { useSpring, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 
 import riccio from '../media/riccio.jpg';
+import riccio2 from "../media/riccioBagno.jpeg";
+import riccio3 from "../media/riccioBagno2.jpeg";
+import riccio4 from "../media/riccioBagno3.jpg";
+import riccio5 from "../media/riccioDark.jpg";
 import luminaire from '../media/luminaire.jpeg';
+import luminaire2 from "../media/luminaireBagno.jpg";
+import luminaire3 from "../media/luminaireDark.jpg";
+import luminaire4 from "../media/luminaire2.jpeg";
 import fico from '../media/fico.jpg';
+import fico2 from '../media/fico2.jpg';
 import lavanda from '../media/lavanda.jpg';
+import lavanda2 from '../media/lavandaBagno.jpg';
+import lavanda3 from '../media/lavanda2.jpg';
 import maioliche from '../media/maioliche.jpg';
+import maioliche2 from '../media/maioliche2.jpg';
 
 export default function Colors() {
   const [selectedRoom, setSelectedRoom] = useState(null);
@@ -32,35 +43,35 @@ export default function Colors() {
       description: "La camera più ampia presente in struttura, offre la possibilità di aggiungere un letto singolo e/o una culla.", 
       image: riccio, 
       details: "La camera più ampia presente in struttura, ideale per famiglie o gruppi di amici che desiderano più spazio e comfort. La camera è dotata di tutti i servizi necessari per un soggiorno piacevole e rilassante.\n\nDettagli:\n- Letto matrimoniale e possibilità di aggiungere un letto singolo\n- Ampio spazio per muoversi",
-      gallery: [riccio, luminaire, fico] 
+      gallery: [riccio, riccio2, riccio3,, riccio5, riccio4] 
     },
     { 
       name: "Luminarie", 
       description: "La camera più luminosa della struttura, offre la possibilità di aggiungere un letto singolo o una culla.", 
       image: luminaire, 
       details: "La camera più luminosa della struttura, perfetta per chi ama la luce naturale e desidera un ambiente arioso e accogliente. La camera è arredata con gusto e dotata di tutti i comfort moderni.\n\nDettagli:\n- Letto matrimoniale con opzione per letto singolo\n- Ampie finestre che lasciano entrare molta luce\n- Arredamento moderno e confortevole",
-      gallery: [luminaire, fico, riccio] 
+      gallery: [luminaire, luminaire2, luminaire3, luminaire4] 
     },
     { 
       name: "Fico D'India", 
       description: "La camera più riservata del B&B, ha una porta finestra apribile che affaccia sul cortile interno.", 
       image: fico, 
       details: "La camera più riservata del B&B, ideale per chi cerca tranquillità e privacy. La camera è dotata di tutti i comfort necessari per un soggiorno rilassante e piacevole.\n\nDettagli:\n- Letto matrimoniale\n- Vista sul cortile interno\n- Ambiente tranquillo e riservato",
-      gallery: [fico, riccio, luminaire] 
+      gallery: [fico, fico2, luminaire] 
     },
     { 
       name: "Lavanda", 
       description: "Una camera matrimoniale standard, perfetta per le coppie che cercano un soggiorno intimo e rilassante.", 
       image: lavanda, 
       details: "Una camera matrimoniale standard, arredata con colori tenui e rilassanti, creando un'atmosfera accogliente e serena. Dotata di tutti i comfort moderni per un soggiorno piacevole.\n\nDettagli:\n- Letto matrimoniale\n- Arredamento accogliente e rilassante\n- Ambiente intimo e sereno",
-      gallery: [riccio, luminaire, fico] 
+      gallery: [lavanda, lavanda2, lavanda3] 
     },
     { 
       name: "Maioliche", 
       description: "Camera piccola, ideale per viaggiatori singoli. Senza vista esterna ma confortevole e completa.", 
       image: maioliche, 
       details: "Camera piccola, perfetta per chi cerca un alloggio funzionale e ben arredato. La camera è dotata di tutti i servizi necessari per un soggiorno confortevole.\n\nDettagli:\n- Letti singoli\n- Arredamento funzionale\n- Ambiente confortevole e completo",
-      gallery: [fico, luminaire, riccio] 
+      gallery: [maioliche, maioliche2, riccio] 
     },
   ];
   

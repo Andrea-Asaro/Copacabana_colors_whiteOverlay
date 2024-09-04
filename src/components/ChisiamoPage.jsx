@@ -3,8 +3,8 @@ import { useSpring, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 import "./ChisiamoPage.css";
 import image1 from "../media/ChisiamoPageImage1.jpg";
-import image2 from "../media/ChisiamoPageImage2.jpeg";
-import image3 from "../media/ChisiamoPageImage3.jpg";
+import image2 from "../media/riccioBagno.jpeg";
+import image3 from "../media/luminaireBagno.jpg";
 import image4 from "../media/ChisiamoPageImage4.jpeg";
 
 export default function ChisiamoPage() {
